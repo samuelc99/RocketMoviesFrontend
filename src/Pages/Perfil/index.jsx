@@ -7,7 +7,7 @@ import { ButtonText } from "../../Componentes/ButtonText"
 import { Input } from "../../Componentes/Input"
 import { api } from '../../services/api';
 
-import { avatarPlaceholder } from "../../assets/avatar_placeholder"
+import  avatarPlaceholder  from "../../assets/avatar_placeholder.svg"
 
 import { useAuth } from '../../hooks/auth'
  

@@ -16,9 +16,9 @@ export function MyMovies({ data, ...rest}) {
           <p>{data.description}</p>
 
           {
-            data.tags && 
+            data.movie_tags && 
             <footer>
-              { data.tags.map((tag) => (
+              { data.movie_tags.map((tag) => (
                 <Tag 
                 key={tag.id}
                 title={tag.name} 

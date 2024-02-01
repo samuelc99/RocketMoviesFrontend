@@ -2,7 +2,7 @@ import { Container, Profile } from "./styles";
 import { Input } from "../Input"
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
-import { avatarPlaceholder } from "../../assets/avatar_placeholder"
+import  avatarPlaceholder  from "../../assets/avatar_placeholder.svg"
 import { useNavigate } from "react-router-dom";
 
 
@@ -15,7 +15,7 @@ export function Header({ ...props }) {
     signOut()
   }
 
-  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder 
 
   
   return(

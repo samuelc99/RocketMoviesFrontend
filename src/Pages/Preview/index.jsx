@@ -7,15 +7,13 @@ import { RiTimeLine } from 'react-icons/ri'
 import { useAuth } from '../../hooks/auth';
 
 import { api } from '../../services/api'
-import { avatarPlaceholder } from "../../assets/avatar_placeholder"
+import  avatarPlaceholder  from "../../assets/avatar_placeholder.svg"
 
 import { Rating } from '../../Componentes/Rating'
 import { Header } from '../../Componentes/Header'
 import { Section } from '../../Componentes/Section'
 import { Tag } from '../../Componentes/Tag'
 import { ButtonText } from '../../Componentes/ButtonText'
-
-import moment from "moment-timezone";
 
 import { Container, Content } from './styles'
 
@@ -31,11 +29,6 @@ export function Preview() {
   const avatarUrl = user.avatar ? 
   `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
 
-
-  const formattedDate = moment()
-    .tz('America/Sao_Paulo')
-    .format("DD/MM/YYYY HH:mm:ss");
-
   function handleBack() {
     navigate(-1)
   }
@@ -44,6 +37,7 @@ export function Preview() {
     async function fetchMovies() {
       const response = await api.get(`/notes/${params.id}`);
       setData(response.data);
+      console.log(response)
     }
     fetchMovies();
   }, []);
@@ -64,8 +58,8 @@ export function Preview() {
               />
 
                 <div>
-                  <h1>{data.title}</h1>              
-                  <Rating grade={data.rating}/>
+                  <h1>{data.note.title}</h1>              
+                  <Rating grade={data.note.rating}/>
                 </div>
                   
                 </Section>
@@ -74,7 +68,7 @@ export function Preview() {
                 <img src={avatarUrl} alt={user.name} />
                   <span>Por {user.name}</span>
                   <RiTimeLine/>
-                  <span>{formattedDate}</span>
+                  <span>{data.note.created_at}</span>
           
                 </div>
                 
@@ -94,7 +88,7 @@ export function Preview() {
                 }
 
                 <p>
-                  {data.description} 
+                  {data.note.description} 
                 </p>
 
               </Content>
