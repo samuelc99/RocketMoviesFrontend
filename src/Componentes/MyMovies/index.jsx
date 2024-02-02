@@ -22,7 +22,7 @@ export function MyMovies({ data, ...rest}) {
                 <Tag 
                 key={tag.id}
                 title={tag.name} 
-                color="#d3719c"  
+                color="#454249"  
                 />
               ))}
             </footer>

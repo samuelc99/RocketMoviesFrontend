@@ -7,11 +7,12 @@ display: grid;
 grid-template-rows: 105px auto;
 grid-template-areas: "header" "content";
 
+
 > main {
   grid-area: content;
   overflow-y: auto;
   padding: 4rem 12.3rem;
-
+  
 }
 
 `
@@ -20,7 +21,6 @@ export const Content = styled.div`
 margin: auto;
 max-height: 58.1rem;
 overflow-y: auto;
-
 display: flex;
 flex-direction: column;
 
@@ -79,6 +79,8 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   margin-top: 4rem;
+  max-width: 113rem;
+  white-space: pre-line;
 }
 
 

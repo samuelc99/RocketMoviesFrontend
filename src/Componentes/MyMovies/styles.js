@@ -35,18 +35,27 @@ h1 {
 p {
   width: 100%;
   height: 5.3rem;
-  overflow: hidden;
+
   color: ${({ theme }) => theme.COLORS.GRAY_1};
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   text-align: left;
-
   margin: 1.5rem 0;
 
+  display: block;
+  display: -webkit-box;
+  max-height: 2.4em;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
+
+
+
+
 
 > footer {
     width: 100%;
