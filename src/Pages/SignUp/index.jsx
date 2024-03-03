@@ -65,7 +65,7 @@ export function SignUp() {
         />
 
 
-        <Button title="Cadastrar" onClick={ handleSignUp }/>
+        <Button title="Cadastrar" onClick={ handleSignUp } loading/>
 
         <Link to="/">
           <FiArrowLeft/> Voltar para o login

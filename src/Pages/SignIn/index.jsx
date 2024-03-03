@@ -49,7 +49,7 @@ export function SignIn() {
 
         <Button 
         title="Entrar"
-        onClick={handleSignIn}
+        onClick={handleSignIn} loading
         />
 
         <Link to="register">Criar conta</Link>
